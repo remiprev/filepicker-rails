@@ -30,6 +30,8 @@ module Filepicker
           'value' => options[:value]
         }
 
+        input_options.merge! options[:html] if options[:html]
+
         type = options[:dragdrop] ? 'filepicker-dragdrop' : 'filepicker'
 
         ActionView::Helpers::InstanceTag.new(@object_name, method, @template)
